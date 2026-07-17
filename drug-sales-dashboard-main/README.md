@@ -1,383 +1,338 @@
-# 💊 Drug Sales Sales Dashboard | Power BI Analytics Project
+💊 Drug Sales Dashboard
+A comprehensive, interactive Power BI dashboard designed to analyze pharmaceutical sales data, enabling stakeholders to visualize key metrics, demographic breakdowns, and trends over time to support strategic decision-making.
+<img width="959" height="541" alt="Drug Sales Dashboard" src="https://github.com/user-attachments/assets/41866f82-0eb8-4f92-b321-b6a21fce980e" />
+📋 Table of Contents
+
+Project Overview
+Problem Statement
+Dataset Description
+Solution & Approach
+Dashboard Features
+Tech Stack
+Usage Instructions
+Key Insights & Findings
+Recommendations
+Getting Started
+License
+Contact
+
+🎯 Project Overview
+This project delivers a comprehensive analysis of pharmaceutical sales performance through an interactive Power BI dashboard. The solution integrates customer demographics, product information, and transaction data to provide actionable insights into sales trends, customer behavior, and profitability metrics.
+Key Objective: Enable data-driven decision-making by visualizing sales performance across multiple dimensions (geography, products, customer segments, time periods).
+🔴 Problem Statement
+Stakeholders required visibility into pharmaceutical sales performance with the ability to answer critical business questions:
+
+Which drugs are generating the highest revenue and profit?
+What are the geographic and demographic patterns in sales?
+How have sales trends evolved over time (year-over-year, seasonal patterns)?
+Which customer segments offer the best profitability?
+What are the top-performing sales channels and buyer types?
+
+📊 Tech Stack
+Show Image
+Show Image
+Show Image
+Show Image
+Show Image
+Tools & Technologies
+
+Power BI Desktop - Dashboard design and visualization
+Power Query - Data extraction, transformation, and loading (ETL)
+DAX (Data Analysis Expressions) - Advanced calculations and business logic
+Microsoft Excel - Data preparation and validation
+SQL - Data querying and manipulation (optional)
+
+📂 Dataset Description
+The project uses three interconnected CSV files representing a star schema:
+1. Customers.csv – Customer Demographics
+
+CustomerID - Unique customer identifier
+Age - Customer age
+Gender - Customer gender
+Country - Geographic location
+Additional demographic attributes
+
+2. Drugs.csv – Product Information
+
+DrugID - Unique drug identifier
+DrugName - Name of the pharmaceutical product
+UnitPrice - Selling price per unit
+Cost - Cost of goods sold
+Treats - Medical condition treated
+Category and other product attributes
+
+3. Sales.csv – Transaction Data
+
+SaleID - Unique transaction identifier
+DrugID - Reference to drug sold
+CustomerID - Reference to customer
+UnitsSold - Quantity purchased
+SaleDate - Date of transaction
+BuyerType - Channel (Hospital, Retail, etc.)
+Revenue and profit information
+
+🛠 Solution & Approach
+Data Preparation
+
+Load Data - Import CSV files into Power Query
+Clean Data - Remove duplicates, correct data types, handle missing values
+Transform Data - Create calculated columns and standardize formats
+Validate Quality - Ensure data integrity and consistency
+
+Data Modeling
+
+Create Star Schema - Design dimensional model with fact and lookup tables
+Establish Relationships - Link Customers, Drugs, and Sales tables
+Define Hierarchies - Set up date hierarchies (Year → Quarter → Month → Day)
+Build Measures - Create DAX calculations for KPIs and metrics
+
+Dashboard Development
+
+Design Pages - Create multiple dashboard pages for different analyses
+Add Visualizations - Deploy charts, maps, tables, and KPI cards
+Implement Slicers - Add filters for interactive exploration
+Optimize Performance - Ensure fast loading and responsive interactions
+
+📈 Dashboard Features
+Page 1: Executive Overview
+Key Performance Indicators (KPIs)
+
+Total Sales Quantity
+Total Revenue
+Total Cost
+Net Profit
+Profit Margin %
+Average Order Value
 
-> An interactive Power BI dashboard built to analyze pharmaceutical sales performance through customer demographics, product analytics, geographic insights, and time-series trends. This project demonstrates data modeling, Power Query transformations, DAX calculations, and business intelligence visualization.
+Top Performers
 
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-0078D4?style=flat-square)
-![Power Query](https://img.shields.io/badge/Power_Query-217346?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Completed-00B894?style=flat-square)
+Top 10 Drugs - By revenue, profit, and units sold
+Top Customers - By purchase value and frequency
+Bottom Performers - Identify underperforming products
 
----
+Trend Analysis
 
-# 📊 Dashboard Preview
+Revenue Trend by Year
+Quarterly Performance
+Monthly Breakdown
+Growth Rate Indicators
 
-> **Dashboard screenshots will be added soon.**
 
-<!-- Replace after uploading -->
-<!-- ![Dashboard](images/dashboard.png) -->
+Page 2: Customer & Demographics Analysis
+Geographic Insights
 
----
+Sales by Country - Interactive map visualization
+Regional performance comparison
+Country-level profitability
 
-# 📋 Table of Contents
+Demographic Breakdown
 
-- Project Overview
-- Business Problem
-- Dataset
-- Data Modeling
-- Dashboard Features
-- Tech Stack
-- Dashboard Pages
-- KPIs
-- Business Insights
-- Project Workflow
-- Repository Structure
-- Installation
-- Skills Demonstrated
-- Learning Outcomes
-- Author
+Revenue by Gender - Pie/doughnut chart
+Revenue by Age Group - Bar chart with age cohorts
+Revenue by Buyer Type - Hospital, Retail, Online, etc.
+Customer segment profitability
 
----
+Customer Metrics
 
-# 🎯 Project Overview
+Total Customers
+Average Customer Value
+Customer Distribution
+Repeat Purchase Rate
 
-This project presents a complete Business Intelligence solution for analyzing pharmaceutical sales data using Power BI.
 
-The dashboard combines sales transactions, customer demographics, and product information into an interactive reporting solution that enables users to monitor revenue, profitability, customer behavior, and sales trends across multiple dimensions.
+Page 3: Time-Series & Trends
+Temporal Analysis
 
-The project demonstrates an end-to-end Power BI workflow including:
+Year-over-Year Growth - Compare performance across years
+Monthly Trends - Revenue and profit patterns
+Weekly Breakdown - Sales velocity by week
+Day-of-Week Patterns - Identify peak sales days
 
-- Data Cleaning
-- Data Transformation
-- Data Modeling
-- DAX Calculations
-- Dashboard Development
-- Business Insight Generation
+Seasonality Insights
 
----
+Seasonal peaks and troughs
+Holiday impact analysis
+Trend lines and forecasting
 
-# 🔴 Business Problem
+Comparative Analysis
 
-Organizations often struggle to analyze large volumes of sales data spread across multiple datasets.
+Period-over-period comparison
+Cumulative performance tracking
+Variance analysis
 
-This dashboard answers important business questions such as:
 
-- Which drugs generate the highest revenue?
-- Which products are most profitable?
-- Which countries contribute the highest sales?
-- Which customer demographics purchase the most?
-- How do sales change over months and years?
-- Which buyer types generate maximum revenue?
+Slicers & Filters
 
----
+Year/Month/Quarter
+Drug Name & Category
+Customer Demographics
+Buyer Type
+Geographic Region
+Date Range Selection
 
-# 📂 Dataset
+💡 Usage Instructions
+Option 1: Local Power BI Desktop
+1. Download the .pbix file from the repository
+2. Open Power BI Desktop
+3. File → Open → Select the .pbix file
+4. Interact with slicers and visualizations
+5. Drill down into specific dimensions for detailed analysis
+Option 2: Power BI Service (Published)
+1. Access the Power BI Service link (if published)
+2. Log in with your Microsoft account
+3. View the dashboard in your browser
+4. Share and collaborate with team members
+Navigation Tips
 
-The dashboard is built using three interconnected datasets.
+Use slicers to filter by year, month, drug, buyer type, etc.
+Click on chart elements for cross-filtering
+Hover over visuals for detailed tooltips
+Use drill-down features for granular analysis
+Bookmark custom views for quick access
 
-### Customers
+🔍 Key Insights & Findings
+Revenue Drivers
 
-Contains demographic information:
+Identify top-performing drugs contributing to revenue
+Analyze sales channels and their profitability
+Understand customer segment contributions
 
-- Customer ID
-- Age
-- Gender
-- Country
+Geographic Opportunities
 
----
+High-performing regions vs. underperforming markets
+Geographic expansion opportunities
+Regional marketing effectiveness
 
-### Drugs
+Customer Patterns
 
-Contains product details:
+Demographics of high-value customers
+Buyer type profitability analysis
+Age and gender segment insights
 
-- Drug ID
-- Drug Name
-- Unit Price
-- Cost
-- Disease Treated
+Temporal Trends
 
----
+Seasonal patterns and peak sales periods
+Year-over-year growth trajectories
+Weekly and daily sales velocity
 
-### Sales
+📋 Recommendations
+Based on the dashboard analysis, consider:
 
-Contains transactional information:
+Product Strategy
 
-- Sale ID
-- Customer ID
-- Drug ID
-- Units Sold
-- Sale Date
-- Buyer Type
+Increase inventory for top-performing drugs
+Review and optimize underperforming products
+Analyze drug combinations and cross-selling opportunities
 
----
 
-# ⭐ Data Model
+Geographic Expansion
 
-The dashboard follows a **Star Schema**.
+Target high-potential underperforming regions
+Scale successful markets
+Establish regional partnerships
 
-```
-Customers
-      |
-      |
-Sales Fact Table
-      |
-      |
-Drugs
-```
 
-This model improves query performance and simplifies DAX calculations.
+Customer Targeting
 
----
+Focus marketing on high-value demographics
+Develop tailored strategies for each buyer type
+Implement loyalty programs for key segments
 
-# 🛠 Tech Stack
 
-- Power BI Desktop
-- Power Query
-- DAX
-- Microsoft Excel
-- SQL
+Sales Operations
 
----
+Optimize inventory based on seasonal patterns
+Plan staffing around peak sales periods
+Implement data-driven pricing strategies
 
-# 📈 Dashboard Features
 
-## Executive Dashboard
 
-Includes KPIs such as:
+🚀 Getting Started
+Prerequisites
 
-- Total Revenue
-- Total Cost
-- Net Profit
-- Profit Margin
-- Units Sold
-- Average Order Value
+Microsoft Power BI Desktop (latest version)
+Access to Power BI Service (optional, for cloud sharing)
 
----
+Installation
 
-## Product Analysis
+Clone the Repository
 
-- Top Selling Drugs
-- Bottom Performing Drugs
-- Revenue by Drug
-- Profit by Drug
-- Units Sold by Product
+bash   git clone https://github.com/Priyanshu-2725/DRUG-SALES-DASHBOARD-.git
+   cd DRUG-SALES-DASHBOARD-
 
----
+Open the Dashboard
 
-## Customer Analytics
+Locate drug-sales-dashboard.pbix
+Double-click to open in Power BI Desktop
+Or, import into Power BI Service for cloud access
 
-- Revenue by Gender
-- Revenue by Age Group
-- Revenue by Buyer Type
-- Customer Distribution
-- Customer Segmentation
 
----
+Customize with Your Data
 
-## Geographic Analysis
+Replace sample CSVs with your actual data
+Update data source connections
+Refresh the model
+Publish to share with stakeholders
 
-- Revenue by Country
-- Country-wise Profit
-- Regional Performance
-- Market Comparison
 
----
 
-## Time Series Analysis
-
-- Monthly Sales Trend
-- Quarterly Revenue
-- Yearly Revenue
-- Weekly Sales
-- Daily Sales Trend
-
----
-
-# 📊 Dashboard Pages
-
-## Page 1 — Sales Overview
-
-Displays:
-
-- KPI Cards
-- Revenue Trend
-- Top Products
-- Profit Analysis
-- Sales Summary
-
----
-
-## Page 2 — Customer Insights
-
-Displays:
-
-- Customer Demographics
-- Buyer Type Analysis
-- Geographic Distribution
-- Country Performance
-
----
-
-## Page 3 — Sales Trends
-
-Displays:
-
-- Monthly Trends
-- Year-over-Year Growth
-- Seasonal Analysis
-- Weekly Performance
-
----
-
-# 📌 Key KPIs
-
-- Total Revenue
-- Total Cost
-- Net Profit
-- Profit Margin
-- Units Sold
-- Average Selling Price
-- Average Order Value
-
----
-
-# 📊 Business Insights
-
-The dashboard helps identify:
-
-- Highest revenue-generating products
-- Most profitable customer segments
-- Best-performing countries
-- Seasonal demand fluctuations
-- Sales growth trends
-- Customer purchasing behavior
-
----
-
-# 📈 Recommendations
-
-Based on dashboard insights:
-
-- Increase inventory for top-selling drugs.
-- Improve marketing in high-performing regions.
-- Focus promotions on profitable customer segments.
-- Review low-performing products.
-- Optimize inventory using seasonal trends.
-
----
-
-# 🔄 Project Workflow
-
-```
-Raw CSV Files
+Data Connection Steps
+1. Power BI Desktop → Get Data → Text/CSV
+2. Select your data files (Customers, Drugs, Sales)
+3. Transform in Power Query Editor (clean, rename, filter)
+4. Load data into Power BI
+5. Create relationships between tables
+6. Refresh to see updated visualizations
+📁 Repository Structure
+drug-sales-dashboard/
+├── drug-sales-dashboard.pbix      # Power BI dashboard file
+├── data/
+│   ├── Customers.csv              # Customer demographics
+│   ├── Drugs.csv                  # Product information
+│   └── Sales.csv                  # Transaction data
+├── documentation/
+│   ├── Data_Dictionary.md         # Field descriptions
+│   ├── Methodology.md             # Analysis approach
+│   └── Screenshots/               # Dashboard visuals
+├── README.md                       # This file
+└── LICENSE
+📊 Dashboard Analytics Workflow
+Raw Sales Data
       ↓
-Power Query
+Data Cleaning & Validation (Power Query)
       ↓
-Data Cleaning
+Data Transformation & Enrichment
       ↓
-Star Schema Modeling
+Star Schema Data Modeling
       ↓
-DAX Measures
+DAX Calculations & Measures
       ↓
-Interactive Dashboard
+Interactive Dashboard Development
       ↓
-Business Insights
-```
+Stakeholder Analysis & Insights
+      ↓
+Strategic Recommendations
+🎓 Learning Outcomes
+By exploring this project, you'll learn:
+✅ Building enterprise-grade Power BI dashboards
+✅ Data modeling with star schemas
+✅ Advanced DAX calculations and formulas
+✅ Power Query data transformation techniques
+✅ Interactive dashboard design best practices
+✅ Performance optimization in Power BI
+✅ Storytelling with data visualization
+📄 License
+This project is open source and available under the MIT License. See LICENSE file for details.
+📞 Contact
+Priyanshu Sharma
 
----
+GitHub: @Priyanshu-2725
+Project: Drug Sales Dashboard
 
-# 📁 Repository Structure
 
-```
-DRUG-SALES-DASHBOARD-/
+🔗 Useful Resources
 
-│── Drug Sales Dashboard.pbix
-│── Dataset/
-│     ├── Customers.csv
-│     ├── Drugs.csv
-│     ├── Sales.csv
-│
-│── Images/
-│
-└── README.md
-```
-
----
-
-# 🚀 Getting Started
-
-## Clone Repository
-
-```bash
-git clone https://github.com/Priyanshu-2725/DRUG-SALES-DASHBOARD-.git
-```
-
-Open the project folder:
-
-```bash
-cd DRUG-SALES-DASHBOARD-
-```
-
-Open the `.pbix` file using **Power BI Desktop**.
-
-Refresh the data if required.
-
----
-
-# 📚 Skills Demonstrated
-
-- Power BI
-- Data Visualization
-- Data Modeling
-- Star Schema
-- Power Query
-- DAX
-- ETL
-- Dashboard Design
-- Business Intelligence
-- Data Analytics
-
----
-
-# 🎓 Learning Outcomes
-
-Through this project I gained hands-on experience in:
-
-- Designing interactive dashboards
-- Building Star Schema models
-- Writing DAX measures
-- Creating KPIs
-- Power Query transformations
-- Business storytelling with data
-- Interactive reporting
-
----
-
-# 📄 License
-
-This project is shared for educational and portfolio purposes.
-
----
-
-# 👨‍💻 Author
-
-## Priyanshu Sharma
-
-**GitHub**
-
-https://github.com/Priyanshu-2725
-
-**Project Repository**
-
-https://github.com/Priyanshu-2725/DRUG-SALES-DASHBOARD-
-
----
-
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
-
-Suggestions and feedback are always welcome!
-
----
-
-Turning Data into Business Decisions with Power BI 💊📊
+Power BI Documentation
+DAX Function Reference
+Power Query Guide
+Data Modeling Best Practices
